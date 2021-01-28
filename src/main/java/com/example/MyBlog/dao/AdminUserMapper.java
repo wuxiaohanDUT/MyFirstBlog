@@ -5,7 +5,6 @@ import com.example.MyBlog.entity.AdminUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-
 @Mapper
 public interface AdminUserMapper {
     int insert(AdminUser record);

@@ -21,19 +21,15 @@ public class AdminUserServiceImpl implements AdminUserService {
     }
 
     @Override
-    public int insert(AdminUser record) {
-        return adminUserMapper.insert(record);
+    public Boolean updatePassword(Integer loginUserId, String originalPassword, String newPassword) {
+        return null;
     }
 
     @Override
-    public int insertSelective(AdminUser record) {
-        return adminUserMapper.insertSelective(record);
+    public Boolean updateName(Integer loginUserId, String loginUserName, String nickName) {
+        return null;
     }
 
-    @Override
-    public int updateByPrimaryKey(AdminUser record) {
-        return adminUserMapper.updateByPrimaryKey(record);
-    }
 
     @Override
     public AdminUser login(String userName, String password) {
