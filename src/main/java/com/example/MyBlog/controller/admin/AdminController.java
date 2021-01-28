@@ -15,8 +15,8 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/admin")
 public class AdminController {
 
-    //@Resource
-   // private AdminUserService adminUserService;
+    @Resource
+    private AdminUserService adminUserService;
 
     @GetMapping("/login")
     public String login(){

@@ -1,6 +1,8 @@
 package com.example.MyBlog;
 
+import com.example.MyBlog.dao.BlogMapper;
 import com.example.MyBlog.entity.AdminUser;
+import com.example.MyBlog.entity.Blog;
 import com.example.MyBlog.service.AdminUserService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -15,11 +17,13 @@ class MyBlogApplicationTests {
 
     @Resource
     AdminUserService adminUserService;
+
+    @Resource
+    BlogMapper blogMapper;
     @Test
     void contextLoads() {
-        AdminUser user=adminUserService.login("wxh","e10adc3949ba59abbe56e057f20f883e");
-        //adminUserService.updateByPrimaryKey(user);
-        System.out.println(user);
+        Blog blog=blogMapper.selectByPrimaryKey((long)1);
+        System.out.println(blog);
     }
 
 }
