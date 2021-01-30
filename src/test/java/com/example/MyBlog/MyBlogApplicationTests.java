@@ -22,8 +22,9 @@ class MyBlogApplicationTests {
     BlogMapper blogMapper;
     @Test
     void contextLoads() {
-        Blog blog=blogMapper.selectByPrimaryKey((long)1);
-        System.out.println(blog);
+        Blog blog=new Blog();
+        blog.setBlogId((long)7);
+        blogMapper.insertSelective(blog);
     }
 
 }
