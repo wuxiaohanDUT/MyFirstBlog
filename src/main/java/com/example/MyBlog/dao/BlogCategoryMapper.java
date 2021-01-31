@@ -2,10 +2,12 @@ package com.example.MyBlog.dao;
 
 import com.example.MyBlog.entity.BlogCategory;
 import com.example.MyBlog.util.PageQueryUtil;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+@Mapper
 public interface BlogCategoryMapper {
 
     int deleteByPrimaryKey(Integer categoryId);
