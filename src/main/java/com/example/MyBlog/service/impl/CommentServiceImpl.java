@@ -5,6 +5,7 @@ import com.example.MyBlog.entity.BlogComment;
 import com.example.MyBlog.service.CommentService;
 import com.example.MyBlog.util.PageQueryUtil;
 import com.example.MyBlog.util.PageResult;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class CommentServiceImpl implements CommentService {
 
     @Resource
