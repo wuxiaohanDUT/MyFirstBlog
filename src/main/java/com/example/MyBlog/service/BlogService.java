@@ -1,9 +1,12 @@
 package com.example.MyBlog.service;
 
+import com.example.MyBlog.controller.vo.BlogDetailVO;
+import com.example.MyBlog.controller.vo.SimpleBlogListVO;
 import com.example.MyBlog.entity.Blog;
 import com.example.MyBlog.util.PageQueryUtil;
 import com.example.MyBlog.util.PageResult;
 
+import java.util.List;
 import java.util.SimpleTimeZone;
 
 public interface BlogService {
@@ -22,9 +25,9 @@ public interface BlogService {
 
     PageResult getBlogsForIndexPage(int page);
 
-    //List<SimpleTimeZone> getBlogListForIndexPage(int type);
+    List<SimpleBlogListVO> getBlogListForIndexPage(int type);
 
-    //BlogDetailVO getBlogDetail(Long blogId);
+    BlogDetailVO getBlogDetail(Long blogId);
 
     PageResult getBlogsPageByTag(String tagName,int age);
 
@@ -32,5 +35,5 @@ public interface BlogService {
 
     PageResult getBlogsPageBySearch(String keyword,int page);
 
-    //BlogDetailVO getBlogDetailBySubUrl(String subUrl);
+    BlogDetailVO getBlogDetailBySubUrl(String subUrl);
 }
